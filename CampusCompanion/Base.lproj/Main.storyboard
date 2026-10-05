@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CampusCompanion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Companion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsL-07-hBa">
+                                <rect key="frame" x="20" y="178" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Campus, In Your Pocket" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9q-1v-lXb">
+                                <rect key="frame" x="10" y="220" width="373" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luT-oF-w9f">
+                                <rect key="frame" x="76" y="289" width="240" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2Kp-0g-xsd"/>
+                                    <constraint firstAttribute="height" constant="150" id="B1x-7F-zr5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ZvL-bP-7ty"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ml-CW-0UY">
+                                <rect key="frame" x="112" y="463" width="168" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Started"/>
+                                <connections>
+                                    <action selector="getStartedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSY-UW-6se"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y9q-1v-lXb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="5Nt-X3-fj5"/>
+                            <constraint firstItem="luT-oF-w9f" firstAttribute="top" secondItem="y9q-1v-lXb" secondAttribute="bottom" constant="40" id="68s-I5-q6y"/>
+                            <constraint firstItem="y9q-1v-lXb" firstAttribute="top" secondItem="OsL-07-hBa" secondAttribute="bottom" constant="8" id="AJE-n8-xKJ"/>
+                            <constraint firstItem="OsL-07-hBa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="NFV-zi-ZJH"/>
+                            <constraint firstItem="OsL-07-hBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RxI-8g-7RR"/>
+                            <constraint firstAttribute="trailing" secondItem="y9q-1v-lXb" secondAttribute="trailing" constant="10" id="X16-rY-5YM"/>
+                            <constraint firstItem="luT-oF-w9f" firstAttribute="top" secondItem="y9q-1v-lXb" secondAttribute="bottom" constant="49" id="pLW-wI-gmY"/>
+                            <constraint firstItem="0Ml-CW-0UY" firstAttribute="top" secondItem="luT-oF-w9f" secondAttribute="bottom" constant="24" id="qpD-lg-vdL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OsL-07-hBa" secondAttribute="trailing" constant="20" id="rfw-UQ-Bcq"/>
+                            <constraint firstItem="0Ml-CW-0UY" firstAttribute="top" secondItem="luT-oF-w9f" secondAttribute="bottom" constant="24" id="uIj-gt-fq6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="0Ml-CW-0UY" id="Zxx-pQ-Ybi"/>
+                        <outlet property="titleLabel" destination="OsL-07-hBa" id="0JH-0J-q6W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
