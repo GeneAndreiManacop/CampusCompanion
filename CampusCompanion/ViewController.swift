@@ -10,16 +10,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
     
+    @IBAction func start(_ sender: Any) {
+        subtitleLabel.text = "Let's get started!"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = "Campus Companion"
     }
-    
-    @IBAction func getStartedButton(_ sender: Any) {
-        titleLabel.text = "Let's get started!"
-    }
-    
 
     
 
